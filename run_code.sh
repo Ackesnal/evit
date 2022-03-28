@@ -4,13 +4,13 @@ datapath="../../uqxxu16/data/imagenet"
 
 echo "output dir: $logdir"
 
-python3 -m torch.distributed.launch --nproc_per_node=1 --use_env \
+python3 -m torch.distributed.launch --nproc_per_node=2 --use_env \
 	main.py \
 	--model deit_small_patch16_shrink_base \
 	--fuse_token \
 	--base_keep_rate 0.7 \
 	--input-size 224 \
-	--batch-size 256 \
+	--batch-size 512 \
 	--warmup-epochs 5 \
 	--shrink_start_epoch 10 \
 	--shrink_epochs 100 \
