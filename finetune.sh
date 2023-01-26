@@ -1,6 +1,6 @@
 now=$(date +"%Y%m%d_%H%M%S")
 logdir=/train_log/exp_$now
-datapath=""
+datapath="/scratch/itee/uqxxu16/data/imagenet/"
 ckpt=deit_small_patch16_224-cd65a155.pth
 
 echo "output dir: $logdir"
