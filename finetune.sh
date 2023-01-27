@@ -1,11 +1,11 @@
 now=$(date +"%Y%m%d_%H%M%S")
-logdir=/train_log/exp_$now
+logdir=./train_log/exp_$now
 datapath="/scratch/itee/uqxxu16/data/imagenet/"
 ckpt=deit_small_patch16_224-cd65a155.pth
 
 echo "output dir: $logdir"
 
-python3 -m torch.distributed.launch --nproc_per_node=2 --use_env \
+python3 -m torch.distributed.launch --nproc_per_node=1 --use_env \
 	main.py \
 	--model deit_small_patch16_shrink_base \
 	--fuse_token \
