@@ -9,4 +9,4 @@
 #SBATCH -o EViT0.3_out.txt
 #SBATCH -e EViT0.3_err.txt
 
-finetune.sh
+bash ./finetune.sh
